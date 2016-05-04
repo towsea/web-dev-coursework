@@ -30,7 +30,11 @@
 		$result='<div class="alert alert-success">Thank You! I will be in touch</div>';
 		} else {
 		$result='<div class="alert alert-danger">Sorry there was an error sending your message. Please try again later</div>';
-	}
-	}
-	}
+		}
+		}
+		}
+		
+		//Popup for message sent
+		echo '<script type="text/javascript">alert("Your message has been sent");</script>';
+		echo '<script type="text/javascript">location.replace("index.html");</script>';
 ?>

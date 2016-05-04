@@ -1,4 +1,9 @@
 
 .img-circle {
+    padding-top: 25px;
     border-radius: 50%;
+}
+
+.image{
+    padding-top: 25px;
 }
