@@ -4,13 +4,13 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-
+<!-- style -->
     <title>Showcase Website</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
     <link href="assets/css/Login-bootstrap.css" rel="stylesheet">
-    <link href="assets/css/scrolling-nav.css" rel="stylesheet">
-    <link href="assets/css/bootstrap.min.css" rel="stylesheet">
-    <link href="assets/css/theme.css" type="text/css" rel="stylesheet">
+    <link href="/assets/css/scrolling-nav.css" rel="stylesheet">
+    <link href="/assets/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/assets/css/theme.css" type="text/css" rel="stylesheet">
 </head>
 
 <!-- NavBar --->
@@ -43,7 +43,7 @@
                         <a class="page-scroll" href="#contact">Contact</a>
                     </li>
                     <li>
-                        <button type="button" class="btn btn-default navbar-btn" onclick="window.location.href='Signin.html'">Sign in</button>
+                        <button type="button" class="btn btn-default navbar-btn" onclick="window.location.href='Login.html'">Sign in</button>
                     </li>
                 </ul>
             </div>
@@ -60,8 +60,14 @@
                     <h1>Showcase Website</h1>
                     <p><strong>Hello and welcome</strong> to this showcase website. I am delighted to show you this modern website design.
                         <br> This showcase had been created with greate pride and passion. </p>
-                    <a class="btn btn-info page-scroll" href="#about">Scroll Down</a>
-                    <img class="image" height="400" width="700" src="assets/images/showcase.png">
+                        <table align="center">
+                            <tr>
+                                <td><a class="btn btn-info page-scroll" href="#about">Scroll Down</a></td>
+                            </tr>
+                            <tr>
+                                <td><img class="image" height="400" width="700" src="assets/images/showcase.png"></td>
+                            </tr>
+                        </table>
                 </div>
             </div>
         </div>
@@ -77,8 +83,14 @@
                         <br> Beverley which is in the East Riding Of Yorkshire. Before coming to university i studied at New College Pontefract where i
                         <br> found my love for computers. Because of all this I wanted to go on and persue my creare in working with and around the latest
                         <br> technology and then to one day make something that will help change someones life for the better.</p>
-                    <img class="img-circle" height="400px" src="assets/images/MeFunny.jpg">
-                    <a class="btn btn-info page-scroll" href="#projects">Scroll Down</a>
+                    <table align="center">
+                        <tr>
+                            <td><img class="img-circle" height="400px" src="assets/images/MeFunny.jpg"></td>
+                        </tr>
+                        <tr>
+                            <td><a class="btn btn-info page-scroll" href="#projects">Scroll Down</a></td>
+                        </tr>
+                   </table>
                 </div>
             </div>
         </div>
@@ -137,44 +149,45 @@
     <!-- Contact Section -->
     <section id="contact" class="contact-section">
         <div class="container">
-            <div class="row">
-                <div class="col-lg-12">
-                    <h1>Contact Section</h1>
-                    <form class="form-horizontal" role="form" method="post" action="/assets/PHP/contact-form.php">
-                        <div class="form-group">
-                            <label for="name" class="col-sm-2 control-label">Name</label>
-                            <div class="col-sm-10">
-                                <input type="text" class="form-control" id="name" name="name" placeholder="First & Last Name">
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <label for="email" class="col-sm-2 control-label">Email</label>
-                            <div class="col-sm-10">
-                                <input type="email" class="form-control" id="email" name="email" placeholder="example@domain.com">
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <label for="message" class="col-sm-2 control-label">Message</label>
-                            <div class="col-sm-10">
-                                <textarea class="form-control" rows="4" name="message" placeholder="Your Message">
-                                </textarea>
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <div class="col-sm-10 col-sm-offset-2">
-                                <input id="submit" name="submit" type="submit" value="Send" class="btn btn-primary">
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <div class="col-sm-10 col-sm-offset-2">
-                            </div>
-                        </div>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </section>
-
-</body>
-
+  		<div class="row">
+  			<div class="col-md-6 col-md-offset-3">
+  				<h1 class="page-header text-center">Contact Form Example</h1>
+				<form class="form-horizontal" role="form" method="post" action="/assets/PHP/mail.php">
+					<div class="form-group">
+						<!-- Name Section -->
+						<label for="name" class="col-sm-2 control-label">Name</label>
+						<div class="col-sm-10">
+							<input type="text" class="form-control" id="name" name="name" placeholder="First & Last Name">
+						</div>
+					</div>
+					<!-- Email Secion -->
+					<div class="form-group">
+						<label for="email" class="col-sm-2 control-label">Email</label>
+						<div class="col-sm-10">
+							<input type="email" class="form-control" id="email" name="email" placeholder="example@domain.com">
+						</div>
+					</div>
+					<!-- Message Section -->
+					<div class="form-group">
+						<label for="message" class="col-sm-2 control-label">Message</label>
+						<div class="col-sm-10">
+							<textarea class="form-control" rows="4" name="message"></textarea>
+						</div>
+					<!-- Button -->
+					<div class="form-group">
+						<div class="col-sm-10 col-sm-offset-2">
+							<input id="submit" name="submit" type="submit" value="Send" class="btn btn-primary">
+						</div>
+					</div>
+					<div class="form-group">
+						<div class="col-sm-10 col-sm-offset-2">
+								
+						</div>
+					</div>
+				</form> 
+			</div>
+		</div>
+	</div>   
+  </body>
 </html>
+
