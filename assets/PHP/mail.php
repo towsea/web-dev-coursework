@@ -3,7 +3,7 @@
 		$name = $_POST['name'];
 		$email = $_POST['email'];
 		$message = $_POST['message'];
-		$from = 'contact@website.com'; 
+		$from = 'adam_towse@live.com'; 
 		$to = 'addz.towse@gmail.com'; 
 		$subject = 'Message from contact form ';
 		
@@ -24,15 +24,15 @@
 			$errMessage = 'Please enter your message';
 		}
  
-// If there are no errors, send the email
-if (!$errName && !$errEmail && !$errMessage) {
-	if (mail ($to, $subject, $body, $from)) {
-		$result='<div class="alert alert-success">Thank You! I will be in touch</div>';
-	} else {
-		$result='<div class="alert alert-danger">Sorry there was an error sending your message. Please try again later</div>';
+		// If there are no errors, send the email
+		if (!$errName && !$errEmail && !$errMessage) {
+		if (mail ($to, $subject, $body, $from)) {
+			$result='<div class="alert alert-success">Thank You! I will be in touch</div>';
+		} else {
+			$result='<div class="alert alert-danger">Sorry there was an error sending your message. Please try again later</div>';
+		}
 	}
-}
-	}
+		}
     echo '<script type="text/javascript">alert("Thank you for your message, we will be in contact shortly.");</script>';
     echo '<script type="text/javascript">location.replace("/index.html");</script>';
 ?>
